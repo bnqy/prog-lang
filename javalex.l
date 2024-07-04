@@ -5,7 +5,7 @@ id=([a-zA-Z_][a-zA-Z0-9_]*)
 "/*"([^*]|"*"+[^/*])*"*"+"/" { j0.comment(); }
 "//".*\r?\n                  { j0.comment(); }
 [ \t\r\f]+                   { j0.whitespace(); }
-\n             { j0.newline(); }
+\n                     { j0.newline(); }
 "break"                { return j0.scan(parser.BREAK); }
 "double"               { return j0.scan(parser.DOUBLE); } 
 "else"                 { return j0.scan(parser.ELSE); }
